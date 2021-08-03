@@ -33,3 +33,18 @@ header {
     background: #9dd85d;
     padding: 120px 0;
   }
+
+  .aspect-ratio-box {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    background: white;
+    position: relative;
+  }
+  .aspect-ratio-box-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
