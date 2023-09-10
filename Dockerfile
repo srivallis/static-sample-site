@@ -15,5 +15,5 @@ CMD node app.js
 
 FROM stage as production
 ENV NODE_ENV=production
-COPY . ${APP_DIR}
+COPY . /${APP_DIR}/
 CMD node app.js
