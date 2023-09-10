@@ -4,8 +4,8 @@ FROM node:14-alpine as stage
 
 
 ENV APP_DIR=/sample-site/
-WORKDIR ${APP_DIR}
-COPY package*.json ${APP_DIR}
+WORKDIR /sample-site/
+COPY package*.json /sample-site/
 RUN npm install
 EXPOSE 4000
 
@@ -15,5 +15,5 @@ CMD node app.js
 
 FROM stage as production
 ENV NODE_ENV=production
-COPY . /${APP_DIR}/
+COPY . /sample-site/
 CMD node app.js
