@@ -11,9 +11,9 @@ EXPOSE 3000
 
 FROM stage as development
 ENV NODE_ENV=development
-CMD node app.js
+CMD node ./app.js
 
 FROM stage as production
 ENV NODE_ENV=production
 COPY . /sample-site/
-CMD node app.js
+CMD node ./app.js
